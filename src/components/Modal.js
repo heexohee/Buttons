@@ -1,77 +1,9 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-const ModalOverlay = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
 
-const ModalContent = styled.div`
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-`;
-
-const ModalButtonGroup = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 20px;
-`;
-
-const ModalButton1 = styled.button`
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  font-size: 14px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-left: 10px;
-`;
-
-const ModalButton2 = styled.button`
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  font-size: 14px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-left: 10px;
-`;
-
-const StyledButton1 = styled.button`
-border: none;
-    cursor: pointer;
-    border-radius: 8px;
-    background-color: rgb(85, 239, 196);
-    color: rgb(0, 0, 0);
-    height: 40px;
-    width: 100px;
-`;
-
-
-
-
-const StyledButton2 = styled.button`
-cursor: pointer;
-border-radius: 8px;
-color: rgb(214, 48, 49);
-height: 50px;
-width: 200px;
-border: 3px solid rgb(250, 177, 160);
-background-color: rgb(255, 255, 255);
-font-weight: 600;
-`;
 //---
-function Modal() {
+export default function Modal() {
   const [isOpen1, setIsOpen1] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
 
@@ -123,7 +55,7 @@ function Modal() {
             <p>닫기 버튼 1개가 있고,
 외부 영역을 누르면 모달이 닫혀요.</p>
             <ModalButtonGroup>
-              <ModalButton1 onClick={handleCloseModal2}>Close</ModalButton1>
+              <ModalButton1 onClick={handleCloseModal2}>X</ModalButton1>
               
             </ModalButtonGroup>
           </ModalContent>
@@ -134,4 +66,72 @@ function Modal() {
   );
 }
 
-export default Modal;
+
+//--
+const ModalOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const ModalContent = styled.div`
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+`;
+
+const ModalButtonGroup = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  border-radius: 20px; 
+`;
+
+const ModalButton1 = styled.button`
+  border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: rgb(250, 177, 160);
+    color: rgb(214, 48, 49);
+    height: 40px;
+    width: 100px;
+`;
+
+const ModalButton2 = styled.button`
+  border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: rgb(85, 239, 196);
+    color: rgb(0, 0, 0);
+    height: 40px;
+    width: 100px;
+`;
+
+const StyledButton1 = styled.button`
+border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: rgb(85, 239, 196);
+    color: rgb(0, 0, 0);
+    height: 40px;
+    width: 100px;
+`;
+
+
+
+const StyledButton2 = styled.button`
+cursor: pointer;
+border-radius: 8px;
+color: rgb(214, 48, 49);
+height: 50px;
+width: 200px;
+border: 3px solid rgb(250, 177, 160);
+background-color: rgb(255, 255, 255);
+font-weight: 600;
+`;
