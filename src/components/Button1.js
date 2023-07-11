@@ -1,43 +1,59 @@
 import React from 'react';
 import styled from 'styled-components';
 
+export default function Button1() {
+  const alertM = () => {
+    alert('버튼을 만들어 보세요.');
+  };
 
-function handleClick() {
-  alert('버튼을 만들어 보세요.');
-}
+  const promptM = () => {
+    prompt('어렵나요?', '');
+  };
 
-function Button1() {
   return (
-    <div>
+    <div className='dd'>
       <h1>Button</h1>
-    <div style={{ display: 'flex', flexDirection: 'row' , padding :'10px', gap : '30px'}}>
-    <div>
-      <StyledButton onClick={handleClick} type="large">Large Primary Button</StyledButton>
-      <StyledButton onClick={handleClick} type="middle">middle</StyledButton>
-      <StyledButton onClick={handleClick} type="small">small</StyledButton>
+      <div style={{ display: 'flex', flexDirection: 'row', padding: '10px', gap: '30px' }}>
+        <StyledButton1 onClick={alertM} type="large">Large Primary Button</StyledButton1>
+        <StyledButton1 type="middle">Middle</StyledButton1>
+        <StyledButton1 type="small">Small</StyledButton1>
+      </div>
+      <div style={{ display: 'flex', flexDirection: 'row', padding: '10px', gap: '30px' }}>
+        <StyledButton2 onClick={promptM} type="large">Large Negative Button</StyledButton2>
+        <StyledButton2 type="middle">Middle</StyledButton2>
+        <StyledButton2 type="small">Small</StyledButton2>
+      </div>
     </div>
-    </div>
-    </div>
-
   );
 }
 
-
-export default Button1;
-
-
-const StyledButton = styled.button`
-  padding: 14px 30px;
-  /* height: 45px;
-  width: 200px; */
-  background-color: ${props => props.size === 'middle' ? 'green' : 'blue'};
-  color: #fff;
-  font-size: 12px;
-  border: none;
-  border-radius: 6px;
+const StyledButton1 = styled.button`
   cursor: pointer;
+    border-radius: 8px;
+    color: rgb(0, 0, 0);
+    height: 50px;
+    width: 200px;
+    border: 3px solid rgb(85, 239, 196);
+    background-color: rgb(255, 255, 255);
+    font-weight: 600;
 
-  &:hover {
-    background-color: ${props => props.type === 'middle' ? '#0056b3' : '#5a6268'};
-  }
+
 `;
+
+const StyledButton2 = styled.button`
+  cursor: pointer;
+    border-radius: 8px;
+    color: rgb(214, 48, 49);
+    height: 50px;
+    width: 200px;
+    border: 3px solid rgb(250, 177, 160);
+    background-color: rgb(255, 255, 255);
+    font-weight: 600;
+
+  
+`;
+const dd = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    `;
