@@ -3,15 +3,15 @@ import styled from 'styled-components';
 
 const StyledButton = styled.button`
   padding: 14px 30px;
-  background-color: #007bff;
+  background-color: ${props => props.size === 'middle' ? 'green' : 'blue'};
   color: #fff;
-  font-size: 16px;
+  font-size: 12px;
   border: none;
   border-radius: 6px;
   cursor: pointer;
 
   &:hover {
-    background-color: #0056b3;
+    background-color: ${props => props.type === 'middle' ? '#0056b3' : '#5a6268'};
   }
 `;
 
@@ -22,17 +22,25 @@ function handleClick() {
 function Button1() {
   return (
     <div>
-      <StyledButton onClick={handleClick}>Large Primary Button</StyledButton>
+      <StyledButton onClick={handleClick} type="large">Large Primary Button</StyledButton>
     </div>
   );
 }
-// function Button11() {
-//   return (
-//     <div>
-//       <StyledButton11 onClick={handleClick}>Large Primary Button</StyledButton11>
-//     </div>
-//   );
-// }
 
+function Button2() {
+  return (
+    <div>
+      <StyledButton  size="middle">Middle</StyledButton>
+    </div>
+  );
+}
 
-export default Button1;
+function Button3() {
+  return (
+    <div>
+      <StyledButton size="small">Small</StyledButton>
+    </div>
+  );
+}
+
+export { Button1, Button2, Button3 };

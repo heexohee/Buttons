@@ -19,7 +19,7 @@ function handleClick() {
   prompt('어렵나요?','');
 }
 
-function Button2() {
+function Button2_1() {
   return (
     <div>
       <StButton2 onClick={handleClick}>Large Negative Button</StButton2>
@@ -27,4 +27,4 @@ function Button2() {
   );
 }
 
-export default Button2;
+export default Button2_1;

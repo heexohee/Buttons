@@ -1,34 +1,43 @@
 import React from 'react';
-import Button1 from './components/Button1';
-import Button2 from './components/Button2';
+import { Button1, Button2, Button3 } from './components/Button1';
+import Input from './components/Input';
+
+//import { Button1 } from './components/Button2';
 
 
 function App() {
   return (
-    <>
-    <div class ="buttonon1">
+    <div>
+      <div class='dd'>
       <h1>Button</h1>
-      <div>
-      <Button1 />
-      </div>
-      <Button2 />
+      <div style = {{ display: 'flex'}}>
+      <Button1 /> {/* 큰 사이즈 버튼 */}
+      <Button2 style={{ marginRight: '20px' }}/> {/* 미들 사이즈 버튼 */}
+      <Button3 style={{ marginRight: '10px' }}/> {/* 스몰 사이즈 버튼 */}
     </div>
+    </div>
+    
+    <div>
     <h1>Input</h1>
-
+    
+    <Input />
+    </div>
     <h1>Modal</h1>
-
+    <div>
+      open modal1
+      open modal2
+    </div>
     <h1>Select</h1>
+    <div>
+      open modal1
+      open modal2
+    </div>
 
 
-    </>
+
+    </div>
+    
   );
 }
 
 export default App;
-
-// .buttonon1
-// {
-//   display: flex;
-//     flex-direction: row;
-//     gap: 10px;
-// }
