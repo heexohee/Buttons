@@ -5,7 +5,7 @@ import { styled } from "styled-components";
 
 function Input() {
   const [name, setName] = useState('');
-  const [price, setPrice] = useState(0);
+  const [price, setPrice] = useState('');
 
   const handleSave = () => {
     const data = {
@@ -16,7 +16,7 @@ function Input() {
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'row' , padding :'10px'}}>
+    <div style={{ display: 'flex', flexDirection: 'row' , padding :'10px', gap : '30px'}}>
      
         <div>
         <label>이름</label>
@@ -27,14 +27,14 @@ function Input() {
         // placeholder="이름"
       />
       </div>
-      <div style={{marginLeft: '20px'}}>
+      <div>
       <div>
       <label>가격</label>
        <StAddInput
         type="number"
         value={price}
         onChange={event => setPrice(Number(event.target.value))}
-        // placeholder="가격"
+        placeholder="0"
       />
    </div>
    
@@ -46,28 +46,34 @@ function Input() {
 
 export default Input;
 
+
+//--- 
 const StAddInput = styled.input`
   height: 40px;
   width: 200px;
   border: 1px solid black;
   border-radius: 8px;
-  padding: 0 12px;
+  padding-left: 12px;
+padding-right: 12px;
+  
 `;
 
 const StSaveButton = styled.button`
-  padding: 12px 36px;
+  height: 40px;
+    width: 100px;
   /* background-color: ${props => props.size === 'middle' ? 'green' : 'blue'}; */
   color: black;
   background-color: rgb(85, 239, 196);
   font-size: 14px;
+  font-weight: 400;
   border: none;
   border-radius: 8px;
-  margin-left: 20px;
+  
   cursor: pointer;
 
-  /* &:hover {
-    background-color: ${props => props.type === 'middle' ? '#0056b3' : '#5a6268'};
-  } */
+   &:hover {
+    background-color:  '#0056b3';
+  } 
 `;
 
 // .iFAkxI {
