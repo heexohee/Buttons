@@ -1,0 +1,19 @@
+const handleOverlayClick = (event) => {
+    if (event.target === event.currentTarget) {
+      handleCloseModal();
+    }
+
+        border-radius: 8px;
+    background-color: rgb(85, 239, 196);
+    color: rgb(0, 0, 0);
+    height: 45px;
+    width: 130px;
+
+타입이 Medium일 때
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: rgb(85, 239, 196);
+    color: rgb(0, 0, 0);
+    height: 45px;
+    width: 130px;

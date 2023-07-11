@@ -102,7 +102,7 @@ function Modal() {
   return (
     <>
     <h1>Modal</h1>
-    <div class style={{ display: 'flex', gap: '20px'}} >
+    <div class style={{ padding : '10px', display: 'flex', gap: '10px'}} >
       <StyledButton1 onClick={handleOpenModal1}>Open Modal 1</StyledButton1>
       {isOpen1 && (
         <ModalOverlay onClick={handleOverlayClick1}>

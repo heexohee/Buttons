@@ -18,7 +18,7 @@ function Input() {
   return (
     <div>
         <h1>Input</h1>
-    <div style={{ display: 'flex', flexDirection: 'row' , padding :'10px', gap : '30px'}}>
+    <div style={{ padding : '10px', display: 'flex', flexDirection: 'row', gap : '30px'}}>
     
         <div>
         <label>이름</label>

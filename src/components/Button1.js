@@ -11,16 +11,19 @@ export default function Button1() {
   };
 
   return (
-    <div className='dd'>
+    <div style={{display: 'flex',
+      flexDirection: 'column',
+      gap: '2px'}}>
+        
       <h1>Button</h1>
       <div style={{ display: 'flex', flexDirection: 'row', padding: '10px', gap: '30px' }}>
         <StyledButton1 onClick={alertM} type="large">Large Primary Button</StyledButton1>
-        <StyledButton1 type="middle">Middle</StyledButton1>
+        <StyledButton1 type="medium">Medium</StyledButton1>
         <StyledButton1 type="small">Small</StyledButton1>
       </div>
       <div style={{ display: 'flex', flexDirection: 'row', padding: '10px', gap: '30px' }}>
         <StyledButton2 onClick={promptM} type="large">Large Negative Button</StyledButton2>
-        <StyledButton2 type="middle">Middle</StyledButton2>
+        <StyledButton2 type="medium">Medium</StyledButton2>
         <StyledButton2 type="small">Small</StyledButton2>
       </div>
     </div>
