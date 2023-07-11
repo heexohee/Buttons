@@ -25,7 +25,7 @@ const ModalButtonGroup = styled.div`
   margin-top: 20px;
 `;
 
-const ModalButton = styled.button`
+const ModalButton1 = styled.button`
   padding: 10px 20px;
   background-color: #007bff;
   color: #fff;
@@ -36,7 +36,40 @@ const ModalButton = styled.button`
   margin-left: 10px;
 `;
 
+const ModalButton2 = styled.button`
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+`;
 
+const StyledButton1 = styled.button`
+border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: rgb(85, 239, 196);
+    color: rgb(0, 0, 0);
+    height: 40px;
+    width: 100px;
+`;
+
+
+
+
+const StyledButton2 = styled.button`
+cursor: pointer;
+border-radius: 8px;
+color: rgb(214, 48, 49);
+height: 50px;
+width: 200px;
+border: 3px solid rgb(250, 177, 160);
+background-color: rgb(255, 255, 255);
+font-weight: 600;
+`;
 //---
 function Modal() {
   const [isOpen1, setIsOpen1] = useState(false);
@@ -68,32 +101,35 @@ function Modal() {
 
   return (
     <>
-      <button onClick={handleOpenModal1}>Open Modal 1</button>
+    <h1>Modal</h1>
+    <div class style={{ display: 'flex', gap: '20px'}} >
+      <StyledButton1 onClick={handleOpenModal1}>Open Modal 1</StyledButton1>
       {isOpen1 && (
         <ModalOverlay onClick={handleOverlayClick1}>
           <ModalContent>
             <p>닫기와 확인 버튼 2개가 있고, 외부 영역을 눌러도 모달이 닫히지 않아요.</p>
             <ModalButtonGroup>
-              <ModalButton onClick={handleCloseModal1}>닫기</ModalButton>
-              <ModalButton>확인</ModalButton>
+              <ModalButton1 onClick={handleCloseModal1}>닫기</ModalButton1>
+              <ModalButton2>확인</ModalButton2>
             </ModalButtonGroup>
           </ModalContent>
         </ModalOverlay>
       )}
 
-      <button onClick={handleOpenModal2}>Open Modal 2</button>
+      <StyledButton2 onClick={handleOpenModal2}>Open Modal 2</StyledButton2>
       {isOpen2 && (
         <ModalOverlay onClick={handleOverlayClick2}>
           <ModalContent>
             <p>닫기 버튼 1개가 있고,
 외부 영역을 누르면 모달이 닫혀요.</p>
             <ModalButtonGroup>
-              <ModalButton onClick={handleCloseModal2}>Close</ModalButton>
+              <ModalButton1 onClick={handleCloseModal2}>Close</ModalButton1>
               
             </ModalButtonGroup>
           </ModalContent>
         </ModalOverlay>
       )}
+      </div>
     </>
   );
 }

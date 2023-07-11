@@ -9,28 +9,21 @@ function handleClick() {
 function Button1() {
   return (
     <div>
+      <h1>Button</h1>
+    <div style={{ display: 'flex', flexDirection: 'row' , padding :'10px', gap : '30px'}}>
+    <div>
       <StyledButton onClick={handleClick} type="large">Large Primary Button</StyledButton>
+      <StyledButton onClick={handleClick} type="middle">middle</StyledButton>
+      <StyledButton onClick={handleClick} type="small">small</StyledButton>
     </div>
+    </div>
+    </div>
+
   );
 }
 
-function Button2() {
-  return (
-    <div>
-      <StyledButton  size="middle">Middle</StyledButton>
-    </div>
-  );
-}
 
-function Button3() {
-  return (
-    <div>
-      <StyledButton size="small">Small</StyledButton>
-    </div>
-  );
-}
-
-export { Button1, Button2, Button3 };
+export default Button1;
 
 
 const StyledButton = styled.button`
