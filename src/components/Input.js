@@ -16,7 +16,9 @@ function Input() {
   };
 
   return (
-    <div>
+    <div style={{ padding: '10px'
+      
+  }}>
         <h1>Input</h1>
     <div style={{ padding : '10px', display: 'flex', flexDirection: 'row', gap : '30px'}}>
     

@@ -9,16 +9,10 @@ import Select from './components/Select';
 function App() {
   return (
     <>
-      
       <Button1 />
       <Input />
       <Modal />
       <Select />
-   
-  
-
-
-
     </>
     
   );

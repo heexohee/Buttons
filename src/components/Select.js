@@ -19,7 +19,7 @@ function Select() {
           height: '200px',
           overflow: 'hidden',
           position: 'relative',
-          marginTop : '50px'
+          padding : '0 0 0 10px'
          
           }}>
     <h1>Select</h1>

@@ -33,6 +33,9 @@ export default function Modal() {
 
   return (
     <>
+    <div style={{ padding: '10px'
+      
+    }}>
     <h1>Modal</h1>
     <div class style={{ padding : '10px', display: 'flex', gap: '10px'}} >
       <StyledButton1 onClick={handleOpenModal1}>Open Modal 1</StyledButton1>
@@ -61,6 +64,7 @@ export default function Modal() {
           </ModalContent>
         </ModalOverlay>
       )}
+      </div>
       </div>
     </>
   );
